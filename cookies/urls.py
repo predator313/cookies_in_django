@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.setcookies,name='setcookies'),
     path('getcookies/',views.getcookies,name='getcookies'),
+    path('deletecookies/',views.deletecookies,name='delcookies'),
 ]

@@ -12,3 +12,9 @@ def setcookies(request):
 def getcookies(request):
     name=request.COOKIES.get('name','zaid as guest')
     return render(request,'bart/getcookies.html',{'name':name})
+
+#function for deleting cookies from terminal
+def deletecookies(request):
+    response=render(request,'bart/deletecookies.html')
+    response.delete_cookie('name')
+    return response
